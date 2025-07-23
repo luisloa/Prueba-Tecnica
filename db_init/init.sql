@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS prueba_tecnica_db;
+
+\c prueba_tecnica_db;
+
+CREATE TABLE IF NOT EXISTS orders(
+    id SERIAL PRIMARY KEY,
+    company_name VARCHAR(130) NULL,
+    company_id VARCHAR(24) NOT NULL,
+    amount DECIMAL(16, 2) NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
+);

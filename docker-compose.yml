@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16
+    container_name: postgres-pt-db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - ./db_init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: python-app
+    depends_on:
+      - db
