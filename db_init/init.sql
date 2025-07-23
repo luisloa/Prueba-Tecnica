@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXISTS prueba_tecnica_db;
-
-\c prueba_tecnica_db;
-
 CREATE TABLE IF NOT EXISTS orders(
     id SERIAL PRIMARY KEY,
     company_name VARCHAR(130) NULL,
