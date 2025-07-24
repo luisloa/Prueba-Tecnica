@@ -10,7 +10,7 @@ class Data:
 
             df.rename(columns={"name": "company_name"}, inplace=True)
 
-            # Se realiza la vonversion 
+            # Se realiza la conversion 
             df['created_at'] = pd.to_datetime(df['created_at'], errors='coerce')
             df['paid_at'] = pd.to_datetime(df['paid_at'], errors='coerce')
 
