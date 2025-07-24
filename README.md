@@ -6,6 +6,12 @@ Este proyecto implementa un proceso completo que incluye la carga, extracción, 
 
 La fuente de datos proviene de una compañía ficticia, pero el programa está diseñado para ser útil en entornos empresariales reales. Su desarrollo se enfocó en la automatización de procesos, la optimización del tiempo, así como en la usabilidad y escalabilidad del sistema.
 
+La base de datos se implementará utilizando PostgreSQL y se estructurará bajo una arquitectura relacional, debido a que los datos proporcionados son estructurados y uniformes. Esta decisión permite mantener la integridad y consistencia de la información.
+
+El esquema estará conformado por tres tablas, de las cuales dos estarán relacionadas entre sí. Esta arquitectura relacional se adapta perfectamente a los requerimientos del proyecto.
+
+Desde el punto de vista técnico, PostgreSQL es altamente compatible con Python mediante el uso del conector psycopg2, lo cual garantiza estabilidad, escalabilidad y facilidad de integración con el entorno de desarrollo.
+
 # Tecnologías implementadas
 - Python
 - PostgreSQL
