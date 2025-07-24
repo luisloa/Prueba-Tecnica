@@ -11,7 +11,7 @@ class Importacion:
                     ON CONFLICT (id, company_name, company_id) DO NOTHING'''
     
     @classmethod
-    def importador(cls):
+    def importador(cls, data):
         filas_insertadas = 0
         try:
             with Conexion.iniciarConexion() as conexion:
@@ -31,7 +31,7 @@ class Importacion:
                                 filas_insertadas += cursor.rowcount
                             except Exception as e:
                                 print(f'Error de inserción en la fila: {fila}. Excepción: {e}') 
-                                sys.exit()
+                                break
         except Exception as e:
             print(f'Error en la transacción: {e}')
             sys.exit()
