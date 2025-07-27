@@ -16,3 +16,4 @@ services:
     container_name: python-app
     depends_on:
       - db
+    command: ["/wait-for-it.sh", "db:5432", "--", "python", "main.py"]
