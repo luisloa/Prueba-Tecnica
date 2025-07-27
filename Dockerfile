@@ -15,9 +15,10 @@ WORKDIR /app
 COPY . /app
 
 # scripts de espera para python (a la espera de instalacion de postgreSQL)
-RUN apt-get update && apt-get install -y netcat
+RUN apt-get update && apt-get install -y netcat-openbsd && rm -rf /var/lib/apt/lists/*
 COPY scripts/wait-for-it.sh /wait-for-it.sh
 RUN chmod +x /wait-for-it.sh
+
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
