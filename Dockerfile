@@ -15,6 +15,7 @@ WORKDIR /app
 COPY . /app
 
 # scripts de espera para python (a la espera de instalacion de postgreSQL)
+RUN apt-get update && apt-get install -y netcat
 COPY scripts/wait-for-it.sh /wait-for-it.sh
 RUN chmod +x /wait-for-it.sh
 
