@@ -1,4 +1,4 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
+#For more information, please refer to https://aka.ms/vscode-docker-python
 FROM python:3-slim
 
 # Keeps Python from generating .pyc files in the container
@@ -24,5 +24,6 @@ RUN chmod +x /wait-for-it.sh
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["python", "scripts/main.py"]
+# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-de>
+CMD ["python", "/app/scripts/main.py"]
+
