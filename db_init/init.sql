@@ -14,12 +14,12 @@ CREATE TABLE IF NOT EXISTS orders(
 
 -- Restricción para evitar duplicados por combinación de columnas clave
 ALTER TABLE orders 
-ADD CONSTRAINT orders_unique
+ADD CONSTRAINT orders_unique_id_company_name_company_id
 UNIQUE (id, company_name, company_id);
 
 -- Restricción para evitar duplicados por combinación de columnas clave
 ALTER TABLE orders 
-ADD CONSTRAINT orders_unique
+ADD CONSTRAINT orders_unique_id_company_id
 UNIQUE (id, company_id);
 
 
